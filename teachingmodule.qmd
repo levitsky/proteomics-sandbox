@@ -37,7 +37,7 @@ hide:
 
 In this module, you will learn about mass spectrometry (MS) data analysis using **Tandem Mass Tag (TMT)**–labeled data, focusing on insights from a breast cancer study. This module is designed to guide you through key stages of MS data analysis, from preparation to advanced analysis, ensuring accurate quantification of TMT-labeled data.
 
-::: {.callout-note}
+::: {.callout-note collapse="true}
 ## Module Overview
 
 The module is divided into three sections:
