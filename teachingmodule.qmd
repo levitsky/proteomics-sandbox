@@ -19,17 +19,19 @@ hide:
 # You should hide the Table of Contents if there are no important titles
 -->
 
-!!! note "Section Overview"
+::: {.callout-note title="Section Overview"}
 
-    &#128368; **Total Time Estimation:** 8 hours
+&#128368; **Total Time Estimation:** 8 hours
 
-    &#128172; **Learning Objectives:**    
-        1. Understand the workflow of the study. <br>
-        2. Retrieve and understand the study design and data from selected papers. <br>
-        3. Download and preprocess proteomics data using FragPipe. <br>
-        4. Set up and use FragPipe for TMT-labeled MS data analysis. <br>
-        5. Create accurate annotation files for data analysis.
-   
+&#128172; **Learning Objectives:**
+    
+- Understand the workflow of the study.
+- Retrieve and understand the study design and data from selected papers.
+- Download and preprocess proteomics data using FragPipe.
+- Set up and use FragPipe for TMT-labeled MS data analysis.
+- Create accurate annotation files for data analysis.
+
+:::   
 
 
 ## Preliminary work
