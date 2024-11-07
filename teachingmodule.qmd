@@ -64,7 +64,6 @@ By the end of this module, you will be equipped to manage TMT-labeled proteomics
 
 
 
-
 ## Preliminary work
 
 For this work, we will use the data that was used and analyzed in the paper *[Breast cancer quantitative proteome and proteogenomic landscape](https://www.nature.com/articles/s41467-019-09018-y)* by Johansson *et al.*, which compares subgroups of breast cancer tumors from the Oslo2 cohort.
@@ -108,6 +107,7 @@ Briefly describe TMT-labeled mass spectrometry proteomics data and explain the e
 #### TMT10-Tags and Tumor IDs
 
 Fill in the table below by entering the corresponding TMT10-tags and Tumor IDs. Once submitted, you'll get instant feedback on whether your input is correct.
+When you have filled the whole table correctly, download the annotation files, **you will need them later**.
 
 <form id="tmtForm">
   <table style="width: 100%; border-collapse: collapse;">
@@ -193,11 +193,11 @@ Fill in the table below by entering the corresponding TMT10-tags and Tumor IDs. 
     </tr>
     <tr>
       <td>TMT131</td>
-      <td><input type="text" id="set1_131" name="set1_131" class="input-box"></td>
-      <td><input type="text" id="set2_131" name="set2_131" class="input-box"></td>
-      <td><input type="text" id="set3_131" name="set3_131" class="input-box"></td>
-      <td><input type="text" id="set4_131" name="set4_131" class="input-box"></td>
-      <td><input type="text" id="set5_131" name="set5_131" class="input-box"></td>
+      <td><input type="text" id="set1_131N" name="set1_131" class="input-box"></td>
+      <td><input type="text" id="set2_131N" name="set2_131" class="input-box"></td>
+      <td><input type="text" id="set3_131N" name="set3_131" class="input-box"></td>
+      <td><input type="text" id="set4_131N" name="set4_131" class="input-box"></td>
+      <td><input type="text" id="set5_131N" name="set5_131" class="input-box"></td>
     </tr>
   </table>
   <button type="button" onclick="checkAnswers()" class="download-button">Submit</button>
@@ -218,7 +218,7 @@ Fill in the table below by entering the corresponding TMT10-tags and Tumor IDs. 
     set1_129C: 'OSL.4D6', set2_129C: 'OSL.449', set3_129C: 'OSL.441', set4_129C: 'OSL.53D', set5_129C: 'OSL.4BA',
     set1_130N: 'OSL.485', set2_130N: 'OSL.44E', set3_130N: 'OSL.430', set4_130N: 'OSL.540', set5_130N: 'OSL.579',
     set1_130C: 'OSL.41B', set2_130C: 'OSL.3EB', set3_130C: 'OSL.4FA', set4_130C: 'OSL.42E', set5_130C: 'OSL.57B',
-    set1_131: 'Pool', set2_131: 'Pool', set3_131: 'Pool', set4_131: 'Pool', set5_131: 'Pool'
+    set1_131N: 'Pool', set2_131N: 'Pool', set3_131N: 'Pool', set4_131N: 'Pool', set5_131N: 'Pool'
   };
 
   function checkAnswers() {
@@ -237,15 +237,14 @@ Fill in the table below by entering the corresponding TMT10-tags and Tumor IDs. 
 
   function downloadFiles() {
     const sets = ['set1', 'set2', 'set3', 'set4', 'set5'];
-    const tmtLabels = ['TMT126', 'TMT127N', 'TMT127C', 'TMT128N', 'TMT128C',
-                       'TMT129N', 'TMT129C', 'TMT130N', 'TMT130C', 'TMT131'];
+    const tmtLabels = ['126', '127N', '127C', '128N', '128C', '129N', '129C', '130N', '130C', '131N'];
 
     sets.forEach((set) => {
       let content = '';
       
       // Iterate over each TMT label
       tmtLabels.forEach(label => {
-        const input = document.getElementById(`${set}_${label.slice(-3)}`) || document.getElementById(`${set}_${label.slice(-3, -1)}N`) || document.getElementById(`${set}_${label.slice(-3, -1)}C`);
+        const input = document.getElementById(`${set}_${label}`);
         const userAnswer = input ? input.value.trim() : '';
         content += `${label}\t${userAnswer}\n`;
       });
@@ -324,7 +323,7 @@ What are the benefits of using FragPipe?
 :::
 
 
-
+Now that we know what we want to do and why, it is time to start the **Proteomics Sandbox** application, or job.
 Simple analyses in **FragPipe** may only require 8 GB of RAM, while large-scale or complex analyses may require 24 GB of memory or more ([FragPipe Documentation](https://fragpipe.nesvilab.org/docs/tutorial_fragpipe.html#:~:text=FragPipe%20runs%20on%20Windows%20and,24%20GB%20memory%20or%20more.)), which is why we will allocate 24 GB for this exercise.
 
 In UCloud, the settings should look like this:
@@ -346,49 +345,44 @@ Time can pass quickly when working, so we recommend initially allocating 2 hours
 
 Initially, we will need to download the paper's data. For this exercise, we will only use one sample file from each Plex Set/Pool.
 
-We will use the terminal in the virtual environment for downloading the data. First, we need to update and download the necessary packages. You can do that by typing the following code:
+We will use the terminal in the virtual environment for downloading the data.
 
-```bash
-sudo apt-get update
-sudo apt-get install lftp
-```
-
-::: {.question}
-What does the code above do? Please explain its functionality and purpose.
-:::
-
-
-Now, we can access the FTP server where the data is located. You will need the server address from the correct FTP-server, which can be found on the site for the accession code XXX in ProteomeXchange, previously visited. At the bottom of the page, you will find the FTP-server address where the data is stored.
+Now, we can access the FTP server where the data is located. You will need the server address from the correct FTP-server, which can be found on the site for the accession code PXD008841 in ProteomeXchange, previously visited.
+At the bottom of the page, you will find the FTP-server address where the data is stored.
 
 ::: {.question}
 Please locate the address.
 :::
 
-
-The address is used for accessing the data used in the study. To do so, we can use the package lftp that we just installed to access the server using the following code:
-
-```bash
-lftp [insert the address of the FTP server here]
-lftp ftp://ftp.......
-```
+Click on the "Dataset FTP location" link.
 
 ::: {.question}
 We now have access to the data stored on the FTP server. Please provide a brief description of the contents of the folder on the FTP server.
 :::
 
 
-To download one sample file from each of the Plex Sets, you can use the following code in the terminal:
+To download one sample file from each of the Plex Sets, we will need these URLs only:
 
-##### CODE HERE
 
-::: {.question}
-Please explain what the code is doing by describing the functions used.
+```
+{{< include urls.txt >}}
+```
+
+(you can also download this list [here](https://github.com/hds-sandbox/proteomics-sandbox/blob/webpage/urls.txt)).
+
+::: {.callout-note}
+We recommend to open this material inside **Proteomics Sandbox** to be able to copy & paste or download the file directly into the environment.
 :::
 
+After you save the list of URLs into a file named `urls.txt`. you can use the following code in the terminal:
+
+```
+wget -i urls.txt
+```
 
 If you added your own private folder to the UCloud session, you could now move the data into that folder for better management of the data you're working with.
 
-Next, we can launch FragPipe, which is located on the desktop. In this tutorial, we are using FragPipe version XX.YY in the June 2024 version of the Proteomics Sandbox Application.
+Next, we can launch FragPipe, which is located on the desktop. In this tutorial, we are using FragPipe version **22.0** in the October 2024 version of the **Proteomics Sandbox** Application.
 
 Now that we have launched FragPipe, we need to configure the settings prior to running the analysis. Therefore, we have provided some guiding questions to help you set up the settings in FragPipe:
 
@@ -402,9 +396,12 @@ Which workflow should you select? HINT: How many TMT tags are listed in the tabl
 
 Click ‘Load workflow’ after you have found and selected the correct workflow to be used.
 
-Next, add your files by clicking on “Add files” and locate them in the designated folder for your raw files that you previously created.
+Next, add your files by clicking on “Add files” and locate them in the designated folder for your raw files that you previously created. Assign each file to a separate *experiment* by clicking "Consecutive".
 
-Now you should relocate to the “Database” tab. Here you can either download or browse for an already preexisting database file. In this case, we will simply download the latest database file.
+Go to the "Quant (Isobaric)" tab. Here, you need to provide annotations for TMT channels. Use the five pool annotations that you downloaded from this page.
+You will need to upload them to Ucloud and specify the corresponding annotation file for each experiement in order.
+
+Now you should relocate to the “Database” tab. Here you can either download or browse for an already preexisting database file. In this case, we will simply download the latest database file by clicking the "Download" button in FragPipe.
 
 ::: {.question}
 What is the purpose of the database file used in FragPipe, and why is it important?

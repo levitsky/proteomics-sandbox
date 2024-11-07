@@ -1,0 +1,103 @@
+---
+title: "Breast Cancer Proteomics Module: SDRF"
+summary: Teaching module provided for the proteomics module. 
+date: last-modified
+author: Lev Levitsky
+hide:
+  - navigation
+---
+
+
+::: {.question}
+Suppose you want to reproduce the figures from the article. What do you need for that, except the experimental data files?
+:::
+
+### SDRF metadata format
+
+Familiarize yourself with the **Sample and Data Relationship Format for Proteomics** - its [general description](https://github.com/bigbio/proteomics-sample-metadata)
+and take a look at the [specification](https://github.com/bigbio/proteomics-sample-metadata/blob/master/sdrf-proteomics/README.adoc). Then answer a few questions:
+
+::: {.question}
+What is the general layout of an SDRF file?
+:::
+
+::: {.question}
+What is the scope of information contained in an SDRF file?
+:::
+
+::: {.question}
+What columns would capture the most important sample characteristics for the dataset you are working with?
+:::
+
+::: {.question}
+How are the valid values defined for different columns?
+:::
+
+
+We will now create an annotation for a small subset of our data according to SDRF-Proteomics standard. Go to [lesSDRF](https://lessdrf.streamlit.app/),
+then start a new SDRF annotation with the human template. When asked for file names, input only the first RAW file name from the annotation table found in supporting information.
+After that, proceed to step 2, labeling.
+
+Carefully select the list of labels corresponding to the dataset, then click "Submit selection", and proceed to specify that every label is present in "ALL" files. Then click "Ready" and proceed to step 3.
+
+::: {.question}
+How many rows does the SDRF table have now? How many would it have if we annotated the entire dataset?
+:::
+
+Fill in the first three required columns one by one: source name, organism, and organism part.
+
+::: {.question}
+What would be a good sample identifier for the "source name" column?
+:::
+
+Fill in the next column, cell type. Consider that we are dealing with cancer samples. For the next columns, ancestry category and age, you can select "not available".
+Then, fill in the "sex" column.
+
+It is time to fill in the disease column.
+
+::: {.question}
+How many different values for disease can we possibly have in our annotation? What do they correspond to?
+:::
+
+::: {.question}
+How many different values will we actually use when annotating the selected subset of data?
+:::
+
+Proceed to fill the disease column, then fill in the rest of the columns, up to and including "instrument".
+
+::: {.question}
+How many different values should you use in the "assay name" column when annotating the subset? Why? How many different values should there be in the entire annotation?
+:::
+
+When you have only four columns left (cleavage agent details, modifications, precursor and fragment mass tolerance), skip to step 4 and fill the factor value column.
+
+::: {.question}
+What is the meaning of factor value, and what should it be in this case?
+:::
+
+After that, download the resulting file. Copy the cleavage agent, modifications and mass tolerance information from the partial annotation provided by FragPipe into your file,
+using Excel or similar software. Congratulations! You have a complete annotation according to the SDRF standard, but only for one out of all raw files in the data set.
+If you need a grade for this course, submit your SDRF file together with your answers.
+
+::: {.question}
+How would you go about making a full dataset annotation?
+:::
+
+## Personal Details
+
+**Name:**
+<textarea id="name" placeholder="Type your name here..." class="input-box"></textarea>
+
+**Email:**
+<textarea id="email" placeholder="Type your email here..." class="input-box"></textarea>
+
+**Course/Program:**
+<textarea id="course" placeholder="Type your course/program here..." class="input-box"></textarea>
+
+**Date:**
+<textarea id="date" placeholder="Type the date here..." class="input-box"></textarea>
+
+<button id="downloadBtn" class="download-button">Download Your Answers as PDF</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
