@@ -557,21 +557,21 @@ Guide on how to use Jupyter Notebook in the Proteomics Sandbox Application (git 
 
 ## Personal Details
 
-**Name:**  
-<textarea id="name" placeholder="Type your name here..." class="input-box"></textarea>
++---------------+---------------------------------------------------------------------------------------------------+
+|Name           | <textarea id="name" placeholder="Type your name here..." class="input-box"></textarea>            |
++---------------+---------------------------------------------------------------------------------------------------+
+|Email          | <textarea id="email" placeholder="Type your email here..." class="input-box"></textarea>          |
++---------------+---------------------------------------------------------------------------------------------------+
+|Course/Program | <textarea id="course" placeholder="Type your course/program here..." class="input-box"></textarea>|
++---------------+---------------------------------------------------------------------------------------------------+
+|Date           | <textarea id="date" placeholder="Type the date here..." class="input-box"></textarea>             |
++---------------+---------------------------------------------------------------------------------------------------+
 
-**Email:**  
-<textarea id="email" placeholder="Type your email here..." class="input-box"></textarea>
-
-**Course/Program:**  
-<textarea id="course" placeholder="Type your course/program here..." class="input-box"></textarea>
-
-**Date:**  
-<textarea id="date" placeholder="Type the date here..." class="input-box"></textarea>
+: Please fill in your information {.personal-details}
 
 <button id="downloadBtn" class="download-button">Download Your Answers as PDF</button>
 
-<script src="javascripts/answers.js"/>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+<script src="javascripts/answers.js"/>
 
