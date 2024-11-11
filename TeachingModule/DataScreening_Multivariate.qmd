@@ -1,0 +1,11 @@
+For the downstream workflow, we will follow the tutorial from the Jupyter Notebook embedded below.
+
+<!--
+Guide on how to use Jupyter Notebook in the Proteomics Sandbox Application (git clone)
+
+-->
+
+<iframe src="https://nbviewer.jupyter.org/github/veitveit/training-quantitative-proteomics/blob/main/03_Cluster_Analysis/Multivariate%20analysis.ipynb" 
+        width="100%" 
+        height="1200px">
+</iframe>
