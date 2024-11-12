@@ -102,44 +102,40 @@ To download one sample file from each of the Plex Sets, we will need these URLs 
 We recommend to open this material inside **Proteomics Sandbox** to be able to copy & paste or download the file directly into the environment.
 :::
 
-After you save the list of URLs into a file named `urls.txt`. you can use the following code in the terminal:
+After saving the list of URLs to a file named `urls.txt`, you can use the following command in the terminal. Make sure you are in the correct directory where `urls.txt` is located before running the code below to ensure the file is found correctly:
 
-```
+```{.bash}
 wget -i urls.txt
 ```
 
-If you added your own private folder to the UCloud session, you could now move the data into that folder for better management of the data you're working with.
+If you added your own private folder to the UCloud session, you can now move the data into that folder for better data management.
 
-Next, we can launch FragPipe, which is located on the desktop. In this tutorial, we are using FragPipe version **22.0** in the October 2024 version of the **Proteomics Sandbox** Application.
+Next, we can launch FragPipe, which is located on the desktop. In this tutorial, we are using FragPipe version **22.0** within the October 2024 version of the **Proteomics Sandbox** application, available [here](https://cloud.sdu.dk/app/jobs/create?app=proteomics&version=Oct2024).
 
-Now that we have launched FragPipe, we need to configure the settings prior to running the analysis. Therefore, we have provided some guiding questions to help you set up the settings in FragPipe:
+Now that FragPipe is launched, we need to configure the settings before running the analysis. To assist you in setting up the settings in FragPipe, we have provided some guiding questions:
 
 ### Getting started with FragPipe
 
 ::: {.callout-note}
 Some of the information you will need in this section can be found in **Supplementary Information** to the study. Open the **Supplementary Information**  and go to page 25, **Supplementary Methods**.
 :::
-
-Go to the “Workflow” tab to set up the workflow for the analysis and import the data you have just downloaded.
+Go to the `Workflow` tab to set up the workflow for the analysis and import the data you just downloaded.
 
 ::: {.question}
 Which workflow should you select? **Hint**: What labeling method was used in the study?
 :::
 
-
 ::: {.question}
 How does the labeling method affect data processing?
 :::
 
-Click "Load workflow" after you have found and selected the correct workflow to be used.
+Click `Load workflow` after you have selected the appropriate workflow.
 
-Next, add your files by clicking on “Add files” and locate them in the designated folder for your raw files that you previously created. Assign each file to a separate *experiment* by clicking "Consecutive".
+Next, add your files by clicking on `Add files` and locating them in the designated folder for your raw files. Assign each file to a separate *experiment* by clicking `Consecutive`.
 
-Go to the "Quant (Isobaric)" tab. Here, you need to provide annotations for TMT channels. Use the five pool annotations that you downloaded from this page.
-You will need to upload them to Ucloud and specify the corresponding annotation file for each experiement in order.
+Go to the `Quant (Isobaric)` tab. Here, you need to provide annotations for TMT channels. Use the five pool annotations that you downloaded from this page. You will need to upload them to UCloud and specify the corresponding annotation file for each experiment in order.
 
-Now you should relocate to the “Database” tab. Here you can either download or browse for an already preexisting database file.
-In this case, we will simply download the latest database file by clicking the "Download" button in FragPipe. Add contaminants and decoys.
+Now, navigate to the `Database` tab. Here you can either download a new database file or browse for an existing one. In this case, we will download the latest database file by clicking the `Download` button in FragPipe. Be sure to add contaminants and decoys.
 
 ::: {.question}
 What is the purpose of the database file used in FragPipe, and why is it important?
