@@ -85,7 +85,7 @@ We now have access to the data stored on the FTP server. Please provide a brief 
 
 To download one sample file from each of the Plex Sets, we will need these URLs only:
 
-{{< include TeachingModule/urls.txt >}}
+{{< include ./urls.txt >}}
 
 (You can also download this list [here](https://github.com/hds-sandbox/proteomics-sandbox/blob/webpage/TeachingModule/urls.txt)).
 
