@@ -71,7 +71,7 @@ By the end of this module, you will be equipped to manage TMT-labeled proteomics
 
 ## Part 2: Analysis of MS Data Using FragPipe
 
-{{< include TeachingModule/AnalysisMSData_FragPipe.qmd >}}
+<!--- {{< include TeachingModule/AnalysisMSData_FragPipe.qmd >}} --->
 
 
 ## Part 3: Data screening, multi-variate analysis and clustering
