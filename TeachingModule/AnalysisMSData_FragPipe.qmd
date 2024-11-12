@@ -87,10 +87,10 @@ To download one sample file from each of the Plex Sets, we will need these URLs 
 
 
 ```
-{{< include urls.txt >}}
+{{< include TeachingModule\urls.txt >}}
 ```
 
-(you can also download this list [here](https://github.com/hds-sandbox/proteomics-sandbox/blob/webpage/urls.txt)).
+(You can also download this list [here](https://github.com/hds-sandbox/proteomics-sandbox/blob/webpage/TeachingModule/urls.txt)).
 
 ::: {.callout-note}
 We recommend to open this material inside **Proteomics Sandbox** to be able to copy & paste or download the file directly into the environment.
