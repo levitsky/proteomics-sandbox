@@ -87,7 +87,7 @@ To download one sample file from each of the Plex Sets, we will need these URLs 
 
 
 ```
-{{< include TeachingModule/urls.txt >}}
+{{< include urls.txt >}}
 ```
 
 (you can also download this list [here](https://github.com/hds-sandbox/proteomics-sandbox/blob/webpage/urls.txt)).
