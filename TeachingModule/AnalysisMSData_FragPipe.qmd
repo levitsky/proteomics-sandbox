@@ -92,7 +92,7 @@ We now have access to the data stored on the FTP server. Please provide a brief 
 
 To download one sample file from each of the Plex Sets, we will need these URLs only:
 
-```
+```{.bash}
 {{< include ./urls.txt >}}
 ```
 
@@ -155,7 +155,7 @@ Describe the relationship between decoys and false discovery rate (FDR) by answe
 </ul>
 :::
 
-Next, you can go to the "MSFragger" tab to adjust the parameter settings for the search and matching of the theoretical and experimental peptide spectra.
+Next, you can go to the `MSFragger` tab to adjust the parameter settings for the search and matching of the theoretical and experimental peptide spectra.
 The search parameters to be used are listed in **Supplementary Methods**.
 
 ::: {.question}
@@ -178,7 +178,7 @@ You can also skip configuring MSFragger manually and just use this [parameter fi
 You will need to upload it to UCloud and then load it on the "MSFragger" tab in FragPipe.
 :::
 
-Finally, we can navigate to the “Run” tab and run the analysis. For that, we must choose an output directory for the results of the search made by FragPipe. Once you have adjusted that, you are ready to click on “Run”.
+Finally, we can navigate to the `Run` tab and run the analysis. For that, we must choose an output directory for the results of the search made by FragPipe. Once you have adjusted that, you are ready to click on `Run`.
 
 This process might take some time, so make sure that you still have enough hours allocated on your job on UCloud—otherwise, it will get terminated. Meanwhile, you can answer these questions:
 
