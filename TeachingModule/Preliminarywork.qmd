@@ -9,14 +9,36 @@ Before delving into the actual analysis of the data in FragPipe, we must initial
 
 To better understand the paper, we have formulated some questions that should help clarify the study design, aim, and overall scope of the work. These questions are listed below:
 
-- …
-- …
-- …
+::: {.question}
+What are the primary research goals of this study?
+:::
+
+::: {.question}
+How is the study design structured to achieve the study objective?
+:::
+
+::: {.question}
+What role does LC-MS/MS play in this study, and why was it chosen as a method?
+:::
+
+::: {.question}
+What novel insights were gained from the proteogenomic approach used in this study?
+:::
 
 
 ### Supplementary Data
 
-Before we proceed and download the data available from the paper, we must first delve into some of the details in Supplementary Data 1. This is a large table containing the quantitative proteome data from the Oslo2 breast cancer cohort, which includes 45 subgroups of cancer tumors and relates to Figures 1-6 in the paper.
+Before we proceed and download the data available from the paper, we must first delve into some of the details in Supplementary Data.
+Your first task is to look through the Supplementary Data and find the annotation relating the tumor types to the isotopic labels used.
+
+::: {.question}
+How did you find the required information? Describe the steps you took. How much time did it take?
+:::
+
+::: {.callout-note collapse="true"}
+#### Hint
+If you have not been able to find the annotations, open Supplementary Data 1, and then go to the tab called "Tumor annotations".
+:::
 
 To better understand the supplementary data, we have prepared guiding questions to aid in interpreting the table. You can find the supplementary data in the paper [here](https://www-nature-com.proxy1-bib.sdu.dk/articles/s41467-019-09018-y#Sec15).
 
@@ -39,7 +61,10 @@ Briefly describe TMT-labeled mass spectrometry proteomics data and explain the e
 #### TMT10-Tags and Tumor IDs
 
 Fill in the table below by entering the corresponding TMT10-tags and Tumor IDs. Once submitted, you'll get instant feedback on whether your input is correct.
+
+::: {.callout-note}
 When you have filled the whole table correctly, download the annotation files, **you will need them later**.
+:::
 
 <form id="tmtForm">
   <table style="width: 100%; border-collapse: collapse;">

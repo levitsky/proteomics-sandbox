@@ -109,31 +109,39 @@ Next, we can launch FragPipe, which is located on the desktop. In this tutorial,
 Now that we have launched FragPipe, we need to configure the settings prior to running the analysis. Therefore, we have provided some guiding questions to help you set up the settings in FragPipe:
 
 ### Getting started with FragPipe
+
+::: {.callout-note}
+Some of the information you will need in this section can be found in **Supplementary Information** to the study. Open the **Supplementary Information**  and go to page 25, **Supplementary Methods**.
+:::
+
 Go to the “Workflow” tab to set up the workflow for the analysis and import the data you have just downloaded.
 
 ::: {.question}
-Which workflow should you select? HINT: How many TMT tags are listed in the table in Supplementary Data 1?
+Which workflow should you select? **Hint**: What labeling method was used in the study?
 :::
 
 
-Click ‘Load workflow’ after you have found and selected the correct workflow to be used.
+::: {.question}
+How does the labeling method affect data processing?
+:::
+
+Click "Load workflow" after you have found and selected the correct workflow to be used.
 
 Next, add your files by clicking on “Add files” and locate them in the designated folder for your raw files that you previously created. Assign each file to a separate *experiment* by clicking "Consecutive".
 
 Go to the "Quant (Isobaric)" tab. Here, you need to provide annotations for TMT channels. Use the five pool annotations that you downloaded from this page.
 You will need to upload them to Ucloud and specify the corresponding annotation file for each experiement in order.
 
-Now you should relocate to the “Database” tab. Here you can either download or browse for an already preexisting database file. In this case, we will simply download the latest database file by clicking the "Download" button in FragPipe.
+Now you should relocate to the “Database” tab. Here you can either download or browse for an already preexisting database file.
+In this case, we will simply download the latest database file by clicking the "Download" button in FragPipe. Add contaminants and decoys.
 
 ::: {.question}
 What is the purpose of the database file used in FragPipe, and why is it important?
 :::
 
-
 ::: {.question}
 Which organism should you choose when downloading the database file?
 :::
-
 
 ::: {.question}
 Describe the relationship between decoys and false discovery rate (FDR) by answering the following questions:
@@ -145,15 +153,17 @@ Describe the relationship between decoys and false discovery rate (FDR) by answe
 </ul>
 :::
 
+Next, you can go to the "MSFragger" tab to adjust the parameter settings for the search and matching of the theoretical and experimental peptide spectra.
+The search parameters to be used are listed in **Supplementary Methods**.
 
-Next, you can go to the MSFragger tab to adjust the parameter settings for the search and matching of the theoretical and experimental peptide spectra.
-
-Most of the settings used for MSFragger can be obtained from the paper *NAME OF PAPER*, which is referred to in the Methods and Materials section.
+::: {.question}
+What parameters did you set?
+:::
 
 When all settings have been obtained, MSFragger should look something like this:
 
 ::: {.question}
-What is MSFragger?
+What is MSFragger? What does it do?
 :::
 
 
@@ -161,11 +171,10 @@ What is MSFragger?
 How does MSFragger operate?
 :::
 
-
-::: {.question}
-Why is it essential to run MSFragger for this analysis?
+::: {.callout-note}
+You can also skip configuring MSFragger manually and just use this [parameter file](https://github.com/hds-sandbox/proteomics-sandbox/blob/webpage/fragger.params).
+You will need to upload it to UCloud and then load it on the "MSFragger" tab in FragPipe.
 :::
-
 
 Finally, we can navigate to the “Run” tab and run the analysis. For that, we must choose an output directory for the results of the search made by FragPipe. Once you have adjusted that, you are ready to click on “Run”.
 
@@ -182,7 +191,7 @@ Can the output from this analysis be reliably used for downstream applications g
 
 
 ::: {.question}
-What does it signify that the sample tissues have been fractionated as described in *PAPER*?
+What does it signify that the sample tissues have been fractionated as described in **Supplementary Information**?
 :::
 <ul>
     <li>Outline the fractionation process utilized.</li>
