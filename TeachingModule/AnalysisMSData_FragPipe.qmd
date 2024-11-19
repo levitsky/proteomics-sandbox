@@ -22,11 +22,9 @@ What is FTP, and what is its functionality?
 :::
 
 
-For downloading the data, we will use the **Proteomics Sandbox Application** on UCloud. This platform allows us to access the necessary storage capacity as well as the computational power required to execute this process.
+To download the data, we will use the **Proteomics Sandbox Application** on UCloud. This platform provides the necessary storage capacity and computational power to perform this process.
 
-The **Proteomics Sandbox Application** is a virtual environment that includes multiple software tools, including **FragPipe** for analyzing proteomics data.
-
-You can find the **Proteomics Sandbox Application** on UCloud [here](https://cloud.sdu.dk/app/jobs/create?app=proteomics).
+The **Proteomics Sandbox Application** is a virtual environment that includes various software tools, such as **FragPipe**, for analyzing proteomics data.
 
 First, we will download the data for the sample files to be used in **FragPipe**. Then, we will launch **FragPipe** to run the first analysis of the data. Before doing so, we have some questions regarding **FragPipe** and its usability:
 
@@ -34,19 +32,18 @@ First, we will download the data for the sample files to be used in **FragPipe**
 What is FragPipe, and what are its applications?
 :::
 
-
 ::: {.question}
-If FragPipe were not used for this part of the teaching module, which alternative software tools could be employed? Please provide a few examples.
+If FragPipe was not used for this part of the teaching module, which alternative software tools could be employed? Please provide a few examples.
 :::
-
 
 ::: {.question}
 What are the benefits of using FragPipe?
 :::
 
-
 Now that we know what we want to do and why, it is time to start the **Proteomics Sandbox** application, or job.
 Simple analyses in **FragPipe** may only require 8 GB of RAM, while large-scale or complex analyses may require 24 GB of memory or more ([FragPipe Documentation](https://fragpipe.nesvilab.org/docs/tutorial_fragpipe.html#:~:text=FragPipe%20runs%20on%20Windows%20and,24%20GB%20memory%20or%20more.)), which is why we will allocate 24 GB for this exercise.
+
+You can access the **Proteomics Sandbox Application** on UCloud [here](https://cloud.sdu.dk/app/jobs/create?app=proteomics&version=Oct2024).
 
 In UCloud, the settings should look like this:
 
@@ -83,7 +80,9 @@ At the bottom of the page, you will find the FTP-server address where the data i
 Please locate the address.
 :::
 
-Click on the "Dataset FTP location" link.
+::: {.callout-tip}
+Click on the **Dataset FTP location** link.
+:::
 
 ::: {.question}
 We now have access to the data stored on the FTP server. Please provide a brief description of the contents of the folder on the FTP server.
@@ -96,7 +95,10 @@ To download one sample file from each of the Plex Sets, we will need these URLs 
 {{< include ./urls.txt >}}
 ```
 
-(You can also download this list [here](https://github.com/hds-sandbox/proteomics-sandbox/blob/webpage/TeachingModule/urls.txt)).
+::: {.callout-tip collapse="true"}
+## Tip to Download of Data
+You can also download this list [here](https://github.com/hds-sandbox/proteomics-sandbox/blob/webpage/TeachingModule/urls.txt).
+:::
 
 ::: {.callout-note}
 We recommend to open this material inside **Proteomics Sandbox** to be able to copy & paste or download the file directly into the environment.
@@ -119,6 +121,7 @@ Now that FragPipe is launched, we need to configure the settings before running 
 ::: {.callout-note}
 Some of the information you will need in this section can be found in **Supplementary Information** to the study. Open the **Supplementary Information**  and go to page 25, **Supplementary Methods**.
 :::
+
 Go to the `Workflow` tab to set up the workflow for the analysis and import the data you just downloaded.
 
 ::: {.question}

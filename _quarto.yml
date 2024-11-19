@@ -7,23 +7,33 @@ website:
     left:
       - text: Introduction
         href: index.qmd
-      - text: Getting Started
-        href: gettingstarted.qmd
-      - text: Setup
-        href: setup.qmd
-      - text: ColabFold
-        href: colabfold.qmd
-      - text: Course Materials
-        href: coursematerials.qmd
-      - text: Teaching Module
-        href: teachingmodule.qmd
-      - text: Contributors
-        href: contributors.qmd
+      - sidebar:
+          id: ProteomicsSidebar
+          title: "Navigation"
+          style: "docked"
+          background: "light"
+          collapse-level: 2
+          contents:
+            - id: ProteomicsSandboxApp
+              title: "Proteomics Sandbox App"
+              contents:
+                - text: Getting Started
+                  href: gettingstarted.qmd
+                - text: Setup
+                  href: setup.qmd
+            - text: ColabFold
+              href: colabfold.qmd
+            - text: Course Materials
+              href: coursematerials.qmd
+            - text: Teaching Module
+              href: teachingmodule.qmd
+            - text: Contributors
+              href: contributors.qmd
 
 format:
   html:
     theme:
-          light: [materia, css/materialight.scss]
-          dark: darkly
+      light: [materia, css/materialight.scss]
+      dark: darkly
     toc: true
     css: css/styles.css
