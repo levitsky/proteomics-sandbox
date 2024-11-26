@@ -5,6 +5,26 @@ Guide on how to use Jupyter Notebook in the Proteomics Sandbox Application (git 
 
 -->
 
+You can work with the notebook both on your local machine and in the Proteomics Sandbox application.  
+To do so, download the repository containing the Jupyter Notebook by executing the following snippet in your terminal:  
+
+```bash
+git clone https://github.com/veitveit/training-quantitative-proteomics.git
+```
+
+In the Proteomics Sandbox application:  
+
+1. Navigate to the **`Applications`** menu in the upper left corner.  
+2. Go to **`Development`**.  
+3. Click on **`Jupyter Notebook`**.  
+
+From there, you can select the notebook located in the directory: 
+**`/training-quantitative-proteomics/03_Cluster_Analysis/`**
+
+This directory will be within the folder where you cloned the material in your terminal.
+
+You can now proceed with the multivariate analysis of the material.
+
 <iframe src="https://nbviewer.jupyter.org/github/veitveit/training-quantitative-proteomics/blob/main/03_Cluster_Analysis/Multivariate%20analysis.ipynb" 
         width="100%" 
         height="1200px">
