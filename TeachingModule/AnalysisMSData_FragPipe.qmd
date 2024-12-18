@@ -177,7 +177,7 @@ How does MSFragger operate?
 :::
 
 ::: {.callout-note}
-You can also skip configuring MSFragger manually and just use this [parameter file](https://github.com/hds-sandbox/proteomics-sandbox/blob/webpage/fragger.params).
+You can also skip configuring MSFragger manually and just use this [parameter file](https://github.com/hds-sandbox/proteomics-sandbox/blob/webpage/TeachingModule/fragger.params).
 You will need to upload it to UCloud and then load it on the "MSFragger" tab in FragPipe.
 :::
 
