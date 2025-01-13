@@ -2,7 +2,7 @@
 title: Breast Cancer Proteomics Module
 summary: Teaching module provided for the proteomics module. 
 date: last-modified
-author: Jacob Fredegaard Hansen
+author: Jacob Fredegaard Hansen, Lev Levitsky
 hide:
   - navigation
 ---
@@ -84,7 +84,7 @@ By the end of this module, you will be equipped to manage TMT-labeled proteomics
 {{< include ./sdrf.qmd >}}
 
 
-## Part 4: Data screening, multi-variate analysis and clustering
+## Part 4: Data screening, multi-variate analysis and clustering {#sec-data-analysis}
 
 {{< include ./DataScreening_Multivariate.qmd >}}
 
